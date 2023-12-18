@@ -44,6 +44,15 @@ spring:
   data.rest:
     base-path: /api
     detection-strategy: annotated
+
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+
+  thymeleaf:
+    cache: false
 #------------------------------------------------------------------------
 
 ---
