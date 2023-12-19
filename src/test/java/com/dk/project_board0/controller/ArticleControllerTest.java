@@ -22,7 +22,7 @@ class ArticleControllerTest {
         this.mvc = mvc;
     }
 
-//    @Disabled("구현 중")
+    @Disabled("구현 중")
     @DisplayName("[view][GET] 게시글 list--(게시판 page)의 정상 호출") // 여러 건
     @Test
     public void givenNothing_whenRequestingArticlesView_thenReturnsArticlesView() throws Exception {
@@ -35,7 +35,7 @@ class ArticleControllerTest {
 
     }
 
-    @Disabled("구현 중")
+//    @Disabled("구현 중")
     @DisplayName("[view][GET] 게시글 list--(게시글 상세 page)의 정상 호출") // 단건
     @Test
     public void givenNothing_whenRequestingArticleView_thenReturnsArticleView() throws Exception {
@@ -44,8 +44,8 @@ class ArticleControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/detail"))
-                .andExpect(model().attributeExists("/article"))
-                .andExpect(model().attributeExists("/articleComments"));
+                .andExpect(model().attributeExists("article"))
+                .andExpect(model().attributeExists("articleComments"));
 
     }
 
