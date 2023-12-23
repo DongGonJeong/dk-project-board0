@@ -1,10 +1,12 @@
 package com.dk.project_board0.controller;
 
+import com.dk.project_board0.config.SecurityConfig;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -13,6 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @DisplayName("view controller - 게시글")
+@Import(SecurityConfig.class)
 @WebMvcTest(ArticleController.class)
 class ArticleControllerTest {
 
@@ -22,8 +25,8 @@ class ArticleControllerTest {
         this.mvc = mvc;
     }
 
-    @Disabled("구현 중")
-    @DisplayName("[view][GET] 게시글 list--(게시판 page)의 정상 호출") // 여러 건
+//    @Disabled("구현 중")
+    @DisplayName("1 [view][GET] 게시글 list--(게시판 page)의 정상 호출") // 여러 건
     @Test
     public void givenNothing_whenRequestingArticlesView_thenReturnsArticlesView() throws Exception {
 
@@ -36,7 +39,7 @@ class ArticleControllerTest {
     }
 
 //    @Disabled("구현 중")
-    @DisplayName("[view][GET] 게시글 list--(게시글 상세 page)의 정상 호출") // 단건
+    @DisplayName("2 [view][GET] (게시글 상세 page)의 정상 호출") // 단건
     @Test
     public void givenNothing_whenRequestingArticleView_thenReturnsArticleView() throws Exception {
 
@@ -49,8 +52,8 @@ class ArticleControllerTest {
 
     }
 
-    @Disabled("구현 중")
-    @DisplayName("[view][GET] (게시글 검색 전용 page)의 정상 호출") // 단건
+//    @Disabled("구현 중")
+    @DisplayName("3 [view][GET] (게시글 검색 전용 page)의 정상 호출") // 단건
     @Test
     public void givenNothing_whenRequestingArticlesSearchView_thenReturnsArticlesSearchView() throws Exception {
 
@@ -61,8 +64,8 @@ class ArticleControllerTest {
 
     }
 
-    @Disabled("구현 중")
-    @DisplayName("[view][GET] (게시글 hashtag 검색 page)의 정상 호출") // 단건
+//    @Disabled("구현 중")
+    @DisplayName("4 [view][GET] (게시글 hashtag 검색 page)의 정상 호출") // 단건
     @Test
     public void givenNothing_whenRequestingArticleHashtagSearchView_thenReturnsArticleHashtagSearchView() throws Exception {
 
